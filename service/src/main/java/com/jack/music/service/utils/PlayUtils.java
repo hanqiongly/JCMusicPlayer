@@ -11,12 +11,12 @@ import android.os.RemoteException;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.baidu.java.HashMap;
 import com.jack.aidl.IMusicPlayService;
 import com.jack.aidl.IPlayStatusCallback;
 import com.jack.aidl.JCMusic;
 import com.jack.aidl.MusicPlayService;
 
+import java.util.HashMap;
 import java.util.Iterator;
 
 /**
