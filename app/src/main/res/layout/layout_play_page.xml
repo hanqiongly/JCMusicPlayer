@@ -1,0 +1,47 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+     >
+    <TextView
+        android:id="@+id/btn_play_page_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_btn_play"
+        android:layout_gravity="center_horizontal"
+        android:textSize="16dp"/>
+
+    <TextView
+        android:id="@+id/btn_play_page_prev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_btn_prev"
+        android:textSize="16dp"
+        android:layout_gravity="center_horizontal"
+        />
+    <TextView
+        android:id="@+id/btn_play_page_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_btn_next"
+        android:textSize="16dp"
+        android:layout_gravity="center_horizontal"
+        />
+    <TextView
+        android:id="@+id/btn_play_page_pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_btn_pase"
+        android:textSize="16dp"
+        android:layout_gravity="center_horizontal"
+        />
+    <TextView
+        android:id="@+id/btn_play_page_stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_btn_stop"
+        android:textSize="16dp"
+        android:layout_gravity="center_horizontal"
+        />
+</LinearLayout>

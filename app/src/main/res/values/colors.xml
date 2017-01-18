@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- Color Information of bottom -->
+    <color name="bottom_controller_layer_bg">#109E0000</color>
+    <color name="bottom_controller_text_color">#fa00000f</color>
+</resources>

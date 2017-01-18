@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="30dp">
+    <com.jack.music.widgets.roundedimageview.RoundedImageView
+        android:id="@+id/layout_drawer_left_item_img"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/circle_bottom_test"
+        app:riv_oval="true"
+        app:riv_corner_radius="35dp"
+        app:riv_border_width="1px"
+        android:layout_centerVertical="true"/>
+    <TextView
+        android:id="@+id/layout_drawer_left_item_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/layout_drawer_left_item_img"
+        android:textColor="#e6a8e5"
+        android:textSize="14dp"
+        android:text="测试"
+        android:maxWidth="48dp"/>
+</RelativeLayout>
