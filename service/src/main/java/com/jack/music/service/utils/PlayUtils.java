@@ -16,6 +16,7 @@ import com.jack.aidl.IPlayStatusCallback;
 import com.jack.aidl.JCMusic;
 import com.jack.aidl.MusicPlayService;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 
@@ -197,6 +198,7 @@ public class PlayUtils {
         if (music != null) {
             Log.d("test_info","PlayUtils getNowPlayingMusic() :" + music.toString());
         }
+
         return music;
     }
 
