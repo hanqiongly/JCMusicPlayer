@@ -1,1 +1,1 @@
-include ':app', ':service'/*, ':aidl'*/
+include ':app', ':service', ':funcomponent'/*, ':aidl'*/

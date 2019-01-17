@@ -24,6 +24,10 @@ public class MediaPlaybackActivity extends Activity{
         initWidget();
     }
 
+    private void initData() {
+
+    }
+
     private void initWidget() {
         btnPlay = (TextView)findViewById(R.id.btn_play_page_play);
         btnPrev = (TextView)findViewById(R.id.btn_play_page_prev);

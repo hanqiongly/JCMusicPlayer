@@ -22,10 +22,13 @@ import android.widget.Toast;
 
 import com.jack.aidl.JCMusic;
 import com.jack.music.R;
+import com.jack.music.service.scanner.MusicScanner;
 import com.jack.music.service.utils.PlayConstants;
 import com.jack.music.service.utils.PlayUtils;
 import com.jack.music.utils.UIConstants;
 import com.jack.music.widgets.roundedimageview.RoundedImageView;
+
+import java.util.List;
 
 /**
  * Created by liuyang on 16/11/5.
@@ -354,5 +357,4 @@ public class BottomPlayController extends RelativeLayout implements View.OnClick
         super.onDetachedFromWindow();
         stopUIJobs();
     }
-
 }

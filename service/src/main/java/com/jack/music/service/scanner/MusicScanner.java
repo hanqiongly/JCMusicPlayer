@@ -19,7 +19,7 @@ import java.util.List;
 public class MusicScanner {
     private static final String TAG = "DUG_MusicScanner";
     private static final int DEFAULT_SIZE = 1024;
-    private static final String EXTERNAL_ROOT_PATH = Environment.getExternalStorageDirectory().getAbsolutePath();
+    private static final String EXTERNAL_ROOT_PATH = Environment.getExternalStorageDirectory().getAbsolutePath();/*"/sdcard/"*/
     private File EXTERNAL_ROOT = null;//Environment.getExternalStorageDirectory();
     private static MusicScanner mInstance;
     private List<JCMusic> allMusicList;
@@ -42,7 +42,7 @@ public class MusicScanner {
     }
 
     public MusicScanner traverseRoot() {
-        if (EXTERNAL_ROOT == null || !EXTERNAL_ROOT.exists() || !EXTERNAL_ROOT.canRead() || !EXTERNAL_ROOT.isDirectory()) {
+        if (EXTERNAL_ROOT == null || !EXTERNAL_ROOT.exists() /*|| !EXTERNAL_ROOT.canRead()*/ || !EXTERNAL_ROOT.isDirectory()) {
             return this;
         }
         File[] files = EXTERNAL_ROOT.listFiles();
