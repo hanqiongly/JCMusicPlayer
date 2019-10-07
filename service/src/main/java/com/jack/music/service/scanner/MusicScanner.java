@@ -90,14 +90,24 @@ public class MusicScanner {
     private void dealFile(File file) {
         String path = file.getAbsolutePath();
         if (isFileMediaType(path)) {
-
-            mediaRetriever.setDataSource(path);
+            Log.d(TAG, "deal file path :" + path);
+            try {
+                mediaRetriever.setDataSource(path);
+            } catch (Throwable exception) {
+                mediaRetriever.release();
+                Log.d(TAG, "deal file :" + path + " failed because :" + exception.getLocalizedMessage());
+                mediaRetriever = new MediaMetadataRetriever();
+                return;
+            }
             JCMusic music = new JCMusic();
             String album = mediaRetriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_ALBUM);
             music.setAlbumName(album);
             String artist = mediaRetriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_ARTIST);
             music.setArtistName(artist);
             String musicName = mediaRetriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_TITLE);
+            if (TextUtils.isEmpty(musicName)) {
+                musicName = file.getName();
+            }
             music.setMusicName(musicName);
             String totalTime = mediaRetriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION);
             long duration = 0;

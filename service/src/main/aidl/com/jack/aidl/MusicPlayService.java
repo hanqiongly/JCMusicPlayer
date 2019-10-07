@@ -21,6 +21,7 @@ import java.util.List;
  * Created by liuyang on 16/8/27.
  */
 public class MusicPlayService extends Service{
+    private static final String TAG = "Debug_MusicPlayerService";
     private LocalPlayer localPlayer;
     private MusicScanner musicScanner;
     private MusicDataBaseHelper musicDataBaseHelper;
@@ -28,6 +29,7 @@ public class MusicPlayService extends Service{
 
     public void onCreate() {
         super.onCreate();
+        Log.d(TAG, "Service onCreate()");
         localPlayer = new LocalPlayer();
         localPlayer.setPlayStatusChangedListener(mPlayStatusChangedListener);
         discoverMusics();

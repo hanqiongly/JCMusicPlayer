@@ -1,5 +1,6 @@
 package com.jack.music.service.player.impl;
 
+import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.text.TextUtils;
 import android.util.Log;
@@ -51,6 +52,11 @@ public class LocalPlayer implements Player, MediaPlayer.OnCompletionListener, Me
         mediaPlayer.setOnCompletionListener(this);
         mediaPlayer.setOnErrorListener(this);
         mediaPlayer.setVolume(1.0f, 1.0f);
+        mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+    }
+
+    public void adjustVolume(int deltaVol) {
+
     }
 
     @Override

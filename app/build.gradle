@@ -1,16 +1,15 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion '28.0.3'
+    compileSdkVersion project.app_compileSDKVersion as int
+    buildToolsVersion project.app_buildToolVersion
 
     defaultConfig {
         applicationId "com.jack.music"
-        minSdkVersion 15
-        //noinspection ExpiredTargetSdkVersion
-        targetSdkVersion 23
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion project.app_minSDKVwesion as int
+        targetSdkVersion project.app_targetSDKVersion as int
+        versionCode project.app_VersionCode as int
+        versionName project.app_versonName
     }
     buildTypes {
         release {
@@ -21,10 +20,10 @@ android {
 }
 
 dependencies {
-    provided fileTree(dir: 'libs', include: ['*.jar'])
-    provided 'junit:junit:4.12'
-    compile 'com.android.support:design:23.4.0'
-    compile 'com.android.support:appcompat-v7:23.4.0'
-    compile project(':service')
-    compile project(':funcomponent')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:design:23.4.0'
+    implementation 'com.android.support:appcompat-v7:23.4.0'
+    implementation project(':service')
+    implementation project(':funcomponent')
+    implementation project(':base')
 }

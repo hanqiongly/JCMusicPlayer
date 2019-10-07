@@ -21,6 +21,24 @@
         android:fitsSystemWindows="true"
         android:id="@+id/main_drawer"
         >
+        <TextView
+            android:id="@+id/tv_btn_bindService"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="绑定Service"
+            android:gravity="center"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/tv_btn_request_permission"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="请求手机权限"
+            android:layout_below="@+id/tv_btn_bindService"
+            android:gravity="center"
+            android:visibility="gone"
+            />
         <com.jack.music.widgets.BottomPlayController
             android:id="@+id/layer_bottom_controller"
             android:layout_width="match_parent"
